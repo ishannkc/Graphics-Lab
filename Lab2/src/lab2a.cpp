@@ -43,8 +43,6 @@ void display() {
     glVertex2f(250, 250);
     glEnd();
     
-    // Removed background grid
-    
     glColor3f(1.0f, 0.0f, 0.0f);
     glBegin(GL_LINES);
     glVertex2f(0, 0);

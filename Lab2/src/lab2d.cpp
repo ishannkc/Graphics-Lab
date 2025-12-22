@@ -36,11 +36,7 @@ void drawLineDDA(float x0, float y0, float x1, float y1) {
 // Display callback - renders the line graph
 void display() {
     glClear(GL_COLOR_BUFFER_BIT);
-    
-    // Removed background grid
-    
-    // (Removed axes as requested)
-    
+
     // Calculate scaling factors
     float graphWidth = WINDOW_WIDTH - 2 * PADDING;
     float graphHeight = WINDOW_HEIGHT - 2 * PADDING;

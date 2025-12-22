@@ -43,7 +43,6 @@ void bresenhamLine(int x0, int y0, int x1, int y1) {
 void display() {
     glClear(GL_COLOR_BUFFER_BIT);
     
-    // Removed background grid
     
     // Draw axes
     glColor3f(0.7f, 0.7f, 0.7f);

@@ -42,8 +42,6 @@ void midpointCircle(int centerX, int centerY, int radius) {
 void display() {
     glClear(GL_COLOR_BUFFER_BIT);
     
-    // Removed background grid
-    
     // Draw axes
     glColor3f(0.7f, 0.7f, 0.7f);
     glBegin(GL_LINES);
