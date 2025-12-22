@@ -38,6 +38,7 @@ _deps
 *.sln.docstates
 
 # VS Code
+.vscode 
 .vscode/settings.json
 .vscode/launch.json
 .vscode/.ropeproject
