@@ -15,23 +15,28 @@ void bresenhamLine(int x0, int y0, int x1, int y1) {
     
     int dx = abs(x1 - x0);
     int dy = abs(y1 - y0);
+    //step direction
     int sx = (x0 < x1) ? 1 : -1;
     int sy = (y0 < y1) ? 1 : -1;
+    //handles both slope cases
     int err = (dx > dy) ? (dx / 2) : (-dy / 2);
     
     int x = x0;
     int y = y0;
     
     while (true) {
+        //store current pixel
         linePoints.push_back({x, y});
-        
+        //stop condition
         if (x == x1 && y == y1) break;
         
         int e2 = err;
+        //move in x direction
         if (e2 > -dx) {
             err -= dy;
             x += sx;
         }
+        //move in y direction
         if (e2 < dy) {
             err += dx;
             y += sy;

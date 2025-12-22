@@ -16,14 +16,16 @@ vector<float> dataPoints = {50, 100, 80, 150, 120, 180, 140, 200, 170, 160};
 void drawLineDDA(float x0, float y0, float x1, float y1) {
     float dx = x1 - x0;
     float dy = y1 - y0;
+    //maximum steps needed
     int steps = (int)max(abs(dx), abs(dy));
     
+    //calculate increment in x & y for each steps
     float x_inc = dx / steps;
     float y_inc = dy / steps;
     
     float x = x0;
     float y = y0;
-    
+    //plotting points one by one
     glBegin(GL_POINTS);
     for (int i = 0; i <= steps; i++) {
         glVertex2f(round(x), round(y));
@@ -46,6 +48,7 @@ void display() {
     glColor3f(0.0f, 1.0f, 1.0f);  // Cyan
     glPointSize(2.0f);
     
+    //each iteration draws line between two points
     for (int i = 0; i < dataPoints.size() - 1; i++) {
         // Calculate screen coordinates
         float x0 = PADDING + (i * graphWidth) / (dataPoints.size() - 1);

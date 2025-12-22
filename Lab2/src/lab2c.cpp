@@ -19,7 +19,8 @@ void midpointCircle(int centerX, int centerY, int radius) {
     
     while (x <= y) {
         // Plot all 8 octants
-        circlePoints.push_back({centerX + x, centerY + y});
+        circlePoints.push_back({centerX + x, centerY 
+            + y});
         circlePoints.push_back({centerX - x, centerY + y});
         circlePoints.push_back({centerX + x, centerY - y});
         circlePoints.push_back({centerX - x, centerY - y});
@@ -28,9 +29,13 @@ void midpointCircle(int centerX, int centerY, int radius) {
         circlePoints.push_back({centerX + y, centerY - x});
         circlePoints.push_back({centerX - y, centerY - x});
         
+        //update decision parameter
+        //lies inside circle
         if (d < 0) {
             d = d + 4 * x + 6;
-        } else {
+        }
+        //lies outside circle or on circle
+        else {
             d = d + 4 * (x - y) + 10;
             y--;
         }

@@ -25,6 +25,7 @@ void drawLineDDA(float x0, float y0, float x1, float y1) {
     float x = x0;
     float y = y0;
     
+    //plots one by one
     glBegin(GL_POINTS);
     for (int i = 0; i <= steps; i++) {
         glVertex2f(round(x), round(y));  // Round to nearest pixel
