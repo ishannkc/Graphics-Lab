@@ -1,0 +1,75 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Lab1",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "-std=c++17",
+                "${file}",
+                "-o",
+                "${workspaceFolder}/bin/${fileBasenameNoExtension}.exe",
+                "-IC:\\msys64\\mingw64\\include",
+                "-LC:\\msys64\\mingw64\\lib",
+                "-lfreeglut",
+                "-lopengl32",
+                "-lglu32",
+                "-lm"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Build & Run Lab1",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "-std=c++17",
+                "${file}",
+                "-o",
+                "${workspaceFolder}/bin/${fileBasenameNoExtension}.exe",
+                "-IC:\\msys64\\mingw64\\include",
+                "-LC:\\msys64\\mingw64\\lib",
+                "-lfreeglut",
+                "-lopengl32",
+                "-lglu32",
+                "-lm",
+                ";",
+                "${workspaceFolder}/bin/${fileBasenameNoExtension}.exe"
+            ],
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Clean Build Artifacts",
+            "type": "shell",
+            "command": "Remove-Item",
+            "args": [
+                "-Path",
+                "${workspaceFolder}/bin/*",
+                "-Force",
+                "-ErrorAction",
+                "SilentlyContinue"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
