@@ -42,6 +42,9 @@ _deps
 .vscode/settings.json
 .vscode/launch.json
 .vscode/.ropeproject
+Lab1/.vscode/
+Lab2/.vscode/
+
 
 # Compiled Dynamic libraries
 *.so
