@@ -37,31 +37,9 @@ void drawLineDDA(float x0, float y0, float x1, float y1) {
 void display() {
     glClear(GL_COLOR_BUFFER_BIT);
     
-    // Draw grid
-    glColor3f(0.2f, 0.2f, 0.2f);
-    glBegin(GL_LINES);
-    for (int i = PADDING; i <= WINDOW_WIDTH - PADDING; i += 50) {
-        glVertex2f(i, PADDING);
-        glVertex2f(i, WINDOW_HEIGHT - PADDING);
-    }
-    for (int i = PADDING; i <= WINDOW_HEIGHT - PADDING; i += 50) {
-        glVertex2f(PADDING, i);
-        glVertex2f(WINDOW_WIDTH - PADDING, i);
-    }
-    glEnd();
+    // Removed background grid
     
-    // Draw axes
-    glColor3f(1.0f, 1.0f, 1.0f);
-    glLineWidth(2.0f);
-    glBegin(GL_LINES);
-    // X-axis
-    glVertex2f(PADDING, PADDING);
-    glVertex2f(WINDOW_WIDTH - PADDING, PADDING);
-    // Y-axis
-    glVertex2f(PADDING, PADDING);
-    glVertex2f(PADDING, WINDOW_HEIGHT - PADDING);
-    glEnd();
-    glLineWidth(1.0f);
+    // (Removed axes as requested)
     
     // Calculate scaling factors
     float graphWidth = WINDOW_WIDTH - 2 * PADDING;
@@ -83,17 +61,6 @@ void display() {
         // Draw line using DDA
         drawLineDDA(x0, y0, x1, y1);
     }
-    
-    // Draw data points as larger circles
-    glColor3f(1.0f, 0.0f, 0.0f);  // Red
-    glPointSize(8.0f);
-    glBegin(GL_POINTS);
-    for (int i = 0; i < dataPoints.size(); i++) {
-        float x = PADDING + (i * graphWidth) / (dataPoints.size() - 1);
-        float y = PADDING + (dataPoints[i] / maxDataValue) * graphHeight;
-        glVertex2f(x, y);
-    }
-    glEnd();
     
     glFlush();
     glutSwapBuffers();

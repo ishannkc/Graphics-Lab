@@ -43,18 +43,7 @@ void bresenhamLine(int x0, int y0, int x1, int y1) {
 void display() {
     glClear(GL_COLOR_BUFFER_BIT);
     
-    // Draw grid
-    glColor3f(0.3f, 0.3f, 0.3f);
-    glBegin(GL_LINES);
-    for (int i = 0; i <= WINDOW_WIDTH; i += 50) {
-        glVertex2f(i, 0);
-        glVertex2f(i, WINDOW_HEIGHT);
-    }
-    for (int i = 0; i <= WINDOW_HEIGHT; i += 50) {
-        glVertex2f(0, i);
-        glVertex2f(WINDOW_WIDTH, i);
-    }
-    glEnd();
+    // Removed background grid
     
     // Draw axes
     glColor3f(0.7f, 0.7f, 0.7f);
