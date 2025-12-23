@@ -218,13 +218,6 @@ void reshape(int width, int height) {
     glLoadIdentity();
 }
 
-// Keyboard callback - handles key presses
-void keyboard(unsigned char key, int x, int y) {
-    if (key == 27) {  // ESC key
-        exit(0);
-    }
-}
-
 // Initialize OpenGL settings
 void init() {
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);  // Black background
@@ -241,7 +234,7 @@ int main(int argc, char** argv) {
     
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
-    glutKeyboardFunc(keyboard);
+
     
     init();
     glutMainLoop();
