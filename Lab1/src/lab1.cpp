@@ -232,9 +232,7 @@ void init() {
 
 int main(int argc, char** argv) {
     cout << "Lab 1 - Name Drawing with OpenGL" << endl;
-    cout << "Drawing name: ISHAN" << endl;
-    cout << "Press ESC to exit" << endl;
-    
+
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
     glutInitWindowSize(WINDOW_WIDTH, WINDOW_HEIGHT);
