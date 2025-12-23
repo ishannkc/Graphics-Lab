@@ -100,9 +100,7 @@ void init() {
 
 int main(int argc, char** argv) {
     cout << "Lab 2C - Midpoint Circle Drawing Algorithm" << endl;
-    cout << "Draws a circle centered at (400, 300) with radius 150" << endl;
-    cout << "Press ESC to exit" << endl;
-    
+
     // Draw a single circle at center (400, 300) with radius 150
     midpointCircle(400, 300, 150);
     

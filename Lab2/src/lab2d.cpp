@@ -91,7 +91,7 @@ int main(int argc, char** argv) {
         if (i < dataPoints.size() - 1) cout << ", ";
     }
     cout << endl;
-    cout << "Press ESC to exit" << endl;
+ 
     
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
