@@ -1,5 +1,5 @@
-// Lab3e: 2D Reflection about X-axis (FreeGLUT)
-// Simple: print matrices and draw original + reflected triangle
+// Lab3e: 2D Reflection about X-axis 
+
 
 #include <GL/freeglut.h>
 #include <iostream>
@@ -70,9 +70,7 @@ void reshape(int w, int h) {
     glLoadIdentity();
 }
 
-void keyboard(unsigned char key, int, int) {
-    if (key == 27 /* ESC */) glutLeaveMainLoop();
-}
+
 
 int main(int argc, char** argv) {
     // Put original triangle in first quadrant similar to the image
@@ -103,7 +101,6 @@ int main(int argc, char** argv) {
 
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
-    glutKeyboardFunc(keyboard);
 
     glutMainLoop();
     return 0;

@@ -1,5 +1,5 @@
-// Lab3d: 2D Scaling (FreeGLUT)
-// Simple program that prints scaling math and draws original + scaled square
+// Lab3d: 2D Scaling 
+
 
 #include <GL/freeglut.h>
 #include <iostream>

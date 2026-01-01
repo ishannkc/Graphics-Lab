@@ -1,5 +1,5 @@
 // Lab3fx: 2D Shearing (X-shear) - FreeGLUT
-// Simple: print matrices like the sample and draw original + sheared rectangle
+
 
 #include <GL/freeglut.h>
 #include <iostream>
@@ -71,9 +71,6 @@ void reshape(int w, int h) {
     glLoadIdentity();
 }
 
-void keyboard(unsigned char key, int, int) {
-    if (key == 27 /* ESC */) glutLeaveMainLoop();
-}
 
 int main(int argc, char** argv) {
     // Original rectangle with points: (0,0), (2,0), (2,1), (0,1)
@@ -105,7 +102,7 @@ int main(int argc, char** argv) {
 
     glutDisplayFunc(display);
     glutReshapeFunc(reshape);
-    glutKeyboardFunc(keyboard);
+    
 
     glutMainLoop();
     return 0;
