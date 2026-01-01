@@ -7,6 +7,7 @@
     b. 2D Rotation
     c. 2D Scaling
     d. 2D Reflection
+    e. 2D Shearing(x-shearing)
 
 
 
