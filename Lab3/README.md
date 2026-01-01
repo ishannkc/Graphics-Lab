@@ -8,6 +8,7 @@
     c. 2D Scaling
     d. 2D Reflection
     e. 2D Shearing(x-shearing)
+    f. 2D Shearing(y-shearing)
 
 
 
