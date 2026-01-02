@@ -10,6 +10,18 @@ Short collection of OpenGL programs for the Computer Graphics Course Lab Assessm
 	- `lab2c`: Midpoint circle drawing
 	- `lab2d`: Line graph using DDA
 	- `lab2e`: Simple pie chart
+- `Lab3`:
+	- `lab3a`: Midpoint Ellipse
+	- `lab3b`: 2D Translation
+	- `lab3c`: 2D Rotation
+	- `lab3d`: 2D Scaling
+	- `lab3e`: 2D Reflection
+	- `lab3fx`: 2D Shearing(x-shearing)
+	- `lab3fy`: 2D Shearing(y-shearing)
+	- `lab3ga`: Composite Transformation(translation + scaling)
+	- `lab3gb`: Composite Transformation(translation + rotation)
+	- `lab3gc`: Composite Transformation(rotation + scaling)
+	- `lab3gd`: Composite Transformation(translation + x-shearing)
 
 ## Prerequisites (Windows)
 - MSYS2 with MinGW-w64 toolchain
