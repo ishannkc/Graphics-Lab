@@ -129,7 +129,7 @@ void reshape(int w, int h) {
 
 int main(int argc, char** argv) {
     // Compute clipping once and log to terminal
-    cout << "Cohen–Sutherland Line Clipping\n";
+    cout << "Cohen Sutherland Line Clipping\n";
     cout << "Clip window: [xmin=" << xminW << ", ymin=" << yminW
          << ", xmax=" << xmaxW << ", ymax=" << ymaxW << "]\n";
     cout << "Original line: (" << x1L << ", " << y1L << ") -> ("
