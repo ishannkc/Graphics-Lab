@@ -59,6 +59,17 @@ static void printRotationMatrix(float angleDeg, int axis) {
     }
     cout << "\n";
 }
+static void tick(int) {
+    angle += ROTATION_SPEED;
+
+    if (angle >= 360.0f) {
+        angle -= 360.0f;
+    }
+    
+    glutPostRedisplay();
+    glutTimerFunc(10, tick, 0);  
+}
+
 
 // Draw a simple colored cube
 static void drawCube() {
@@ -155,20 +166,6 @@ static void reshape(int w, int h) {
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 }
-
-static void tick(int) {
-    // Increment angle each frame
-    angle += ROTATION_SPEED;
-    
-    // Keep angle in [0, 360) range
-    if (angle >= 360.0f) {
-        angle -= 360.0f;
-    }
-    
-    glutPostRedisplay();
-    glutTimerFunc(10, tick, 0);  // ~100 FPS for smooth rotation
-}
-
 static void keyboard(unsigned char key, int, int) {
     switch (key) {
         case '1':
