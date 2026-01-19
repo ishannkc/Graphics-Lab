@@ -50,10 +50,8 @@ static void applyTranslation(double P[4], const double M[4][4]) {
 }
 
 static void tick(int) {
-    // Each tick: p' = T * p (only if not yet at center)
     if (!reachedCenter) {
         applyTranslation(pos, T);
-        // Stop when cube reaches a bit past center for better 3D view
         if (pos[0] >= 0.4 && pos[1] >= 0.3) {
             pos[0] = 0.4;
             pos[1] = 0.3;
@@ -62,7 +60,7 @@ static void tick(int) {
         }
     }
 	glutPostRedisplay();
-	glutTimerFunc(16, tick, 0); // ~60 FPS
+	glutTimerFunc(16, tick, 0); 
 }
 
 static void drawCube() {
