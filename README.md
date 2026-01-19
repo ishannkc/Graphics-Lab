@@ -56,9 +56,6 @@ g++ -g -std=c++17 src\lab1.cpp -o bin\lab1.exe -IC:\msys64\mingw64\include -LC:\
 .\u005cbin\lab1.exe
 ```
 
-## VS Code Tasks (optional)
-From the repo root, use Ctrl+Shift+P → “Tasks: Run Task” and choose one of:
-- Build/Run Lab2a/Lab2b/Lab2c/Lab2d/Lab2e
 
 ## Notes
 - These programs are minimal and focus on the core graphics algorithms.
