@@ -31,6 +31,19 @@ static void printScalingMatrix(float sx, float sy, float sz) {
     cout << "[ 0.000  0.000  0.000  1.000 ]\n\n";
 }
 
+static void tick(int) {
+    if (scaleFactor < MAX_SCALE) {
+        scaleFactor += SCALE_SPEED;
+        if (scaleFactor > MAX_SCALE) {
+            scaleFactor = MAX_SCALE;
+        }
+    }
+    
+    glutPostRedisplay();
+    glutTimerFunc(10, tick, 0);
+}
+
+
 // Draw a simple wireframe cube (like in reference images)
 static void drawCube() {
     const float s = 0.5f;  // half-size of cube
@@ -122,18 +135,6 @@ static void reshape(int w, int h) {
     glLoadIdentity();
 }
 
-static void tick(int) {
-    // Increase scale factor each frame, but stop at max
-    if (scaleFactor < MAX_SCALE) {
-        scaleFactor += SCALE_SPEED;
-        if (scaleFactor > MAX_SCALE) {
-            scaleFactor = MAX_SCALE;
-        }
-    }
-    
-    glutPostRedisplay();
-    glutTimerFunc(10, tick, 0);
-}
 
 static void keyboard(unsigned char key, int, int) {
     switch (key) {
