@@ -26,6 +26,12 @@ Short collection of OpenGL programs for the Computer Graphics Course Lab Assessm
 	- `lab4a`: Cohen-Sutherland Line Clipping Algorithm
 	- `lab4b`: Liang-Barsky Line Clipping Algorithm
 	- `lab4c`: Sutherland Hodgemann Polygon Clipping Algorithm
+- `Lab5`:
+	- `lab5a`: 3D Translation
+	- `lab5b`: 3D Rotation
+	- `lab5c`: 3D Scaling
+	- `lab5d`: 3D Shearing
+	- `lab5e`: Perspective Projection
 
 ## Prerequisites (Windows)
 - MSYS2 with MinGW-w64 toolchain
