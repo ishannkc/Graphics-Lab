@@ -49,6 +49,22 @@ static void applyTranslation(double P[4], const double M[4][4]) {
 	for (int i = 0; i < 4; ++i) P[i] = r[i];
 }
 
+static void tick(int) {
+    // Each tick: p' = T * p (only if not yet at center)
+    if (!reachedCenter) {
+        applyTranslation(pos, T);
+        // Stop when cube reaches a bit past center for better 3D view
+        if (pos[0] >= 0.4 && pos[1] >= 0.3) {
+            pos[0] = 0.4;
+            pos[1] = 0.3;
+            reachedCenter = true;
+            cout << "Cube reached target position. Translation stopped.\n";
+        }
+    }
+	glutPostRedisplay();
+	glutTimerFunc(16, tick, 0); // ~60 FPS
+}
+
 static void drawCube() {
 	const float s = 0.25f; // half-size (smaller cube)
 	glBegin(GL_QUADS);
@@ -102,22 +118,6 @@ static void reshape(int w, int h) {
 
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-}
-
-static void tick(int) {
-    // Each tick: p' = T * p (only if not yet at center)
-    if (!reachedCenter) {
-        applyTranslation(pos, T);
-        // Stop when cube reaches a bit past center for better 3D view
-        if (pos[0] >= 0.4 && pos[1] >= 0.3) {
-            pos[0] = 0.4;
-            pos[1] = 0.3;
-            reachedCenter = true;
-            cout << "Cube reached target position. Translation stopped.\n";
-        }
-    }
-	glutPostRedisplay();
-	glutTimerFunc(16, tick, 0); // ~60 FPS
 }
 
 static void key(unsigned char k, int, int) {
